@@ -1,0 +1,401 @@
+body
+    section
+        position: relative
+        z-index: 10
+
+// Header
+.wrapper
+    position: relative
+    background: url(../img/header-banner.png)
+    background-repeat: no-repeat
+    background-position: center center
+    background-attachment: fixed
+    background-size: cover
+    overflow: hidden
+    box-shadow: -1px 1px 25px 10px #8f8f8f
+    &::before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-color: rgba(0, 0, 0, 0.35)
+        border-radius: 15px
+        z-index: 0
+    &::after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100px
+        bottom: 0
+        background: linear-gradient(180deg, rgba(34, 40, 49, 0) 0%, #222831 100%)
+        z-index: 0
+
+    #scroll-opacity
+        opacity: -2
+
+.navbar
+    display: flex
+    justify-content: space-between
+
+.logo
+    margin-top: 45px
+    +r(1280)
+        flex-basis: 18%
+        max-width: 18%
+    +r(1080)
+        flex-basis: 15%
+        max-width: 15%
+    +r(782)
+        flex-basis: 10%
+        max-width: 10%
+
+.navbar__menu
+    display: flex
+    align-items: center
+    flex-basis: 34%
+    max-width: 34%
+    margin-top: 45px
+    grid-gap: 39px
+    +r(1420)
+        grid-gap: 30px
+        flex-basis: 35%
+        max-width: 35%
+    +r(1280)
+        flex-basis: 40%
+        max-width: 40%
+    +r(1080)
+        flex-basis: 43%
+        max-width: 43%
+    +r(820)
+        grid-gap: 20px
+    +r(782)
+        flex-basis: 40%
+        max-width: 40%
+    a
+        font-size: 18px
+        line-height: 22px
+        font-weight: 500
+        color: $w
+        +r(1280)
+            font-size: 16px
+        +r(1080)
+            font-size: 14px
+        +r(782)
+            font-size: 10px
+        &:focus
+            font-weight: 700
+
+.navbar__btn
+    color: $w
+    font-size: 14px
+    line-height: 17px
+    font-weight: 600
+    border-radius: 39px
+    padding: 15px 52px
+    margin-top: 40px
+    +reg
+    background-color: $blue
+    +r(1280)
+        font-size: 12px
+        padding: 15px 45px
+    +r(1080)
+        padding: 10px 35px
+    +r(820)
+        padding: 10px 25px
+        font-size: 10px
+    +r(782)
+        padding: 6px 15px
+        font-size: 8px
+
+.header__headline
+    font-size: 72px
+    line-height: 88px
+    letter-spacing: 2px
+    color: $w
+    margin-top: 113px
+    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
+    font-weight: 200
+    +bold
+
+.header__subtitle
+    color: $w
+    font-size: 18px
+    line-height: 22px
+    letter-spacing: 1.3px
+    font-weight: 600
+    margin: 38px 0 150px
+    display: flex
+    align-items: center
+    justify-content: center
+
+// popular-direction
+.section__popular
+    background-color: $grey
+
+.card__form
+    position: inherit
+    bottom: 56px
+    background-color: $w
+    border-radius: 30px
+    padding: 21px 44px
+    opacity: 1
+
+.card__checkbox
+    display: flex
+    justify-content: space-between
+    margin: 32px 0 17px
+
+.checkbox__item
+    display: flex
+    grid-gap: 60px
+
+.selection
+    display: flex
+    grid-gap: 38px
+    padding-right: 19px
+
+    li
+        display: inline
+        font-size: 14px
+        line-height: 17px
+        color: $blue
+
+    .dropdown__link
+        position: relative
+
+    .dropdown
+        display: none
+        position: relative
+
+        li
+            padding: 20px
+
+    .dropdown.visible
+        display: block
+        position: absolute
+        top: 0
+        width: auto
+        height: auto
+        background-color: $w
+        border-radius: 10px
+        box-shadow: 2px 4px 5px $b
+        margin-top: 20px
+        z-index: 1
+
+.form__content
+    display: flex
+    grid-gap: 14px
+
+.form__block
+    display: flex
+    margin: 0 0 18px
+    grid-gap: 8px
+
+    .form-btn
+        img
+            width: 100%
+            height: 100%
+.form__group
+    position: relative
+    display: flex
+
+    .input
+        border: 1px solid $b25
+        height: 48px
+        width: 363px
+        padding: 12px 64px
+        border-radius: 10px
+
+    input::placeholder
+        font-size: 18px
+        line-height: 20px
+        padding-left: 8px
+
+    img
+        position: absolute
+        left: 14px
+        right: 14px
+        top: 10px
+        bottom: 13px
+
+.form__block--calendar
+    display: flex
+    grid-gap: 8px
+
+    .form__group--calendar
+        display: flex
+        align-items: center
+        height: 48px
+        width: 175px
+        grid-gap: 10px
+        padding: 0 15px
+        border: 1px solid $b25
+        border-radius: 10px
+
+    .calendar
+        font-size: 11px
+        line-height: 13px
+
+.card__btn
+    margin: 0 auto
+    background-color: $blue
+    border-radius: 39px
+    max-width: 20%
+    flex-basis: 20%
+    button
+        padding: 20px 85px
+        font-size: 16px
+        line-height: 20px
+        color: $w
+        +bold
+
+.section__title
+    margin: 48px 0 33px
+    font-size: 32px
+    letter-spacing: 0.5px
+    line-height: 39px
+    color: $w
+    font-weight: 600
+
+.popular__content
+    display: flex
+    grid-gap: 30px
+    img
+        border-radius: 16px
+
+.popular__img-1
+    max-width: 49%
+    flex-basis: 49%
+
+    .block__flex
+        display: flex
+        grid-gap: 31px
+        padding-top: 30px
+
+.popular__title
+    letter-spacing: 0.5px
+    font-weight: 500
+    font-size: 22px
+    line-height: 33px
+    color: $w
+    +preg
+
+.popular__subtitle
+    padding-top: 5px
+    font-size: 16px
+    line-height: 24px
+    color: $w
+    +preg
+
+.img__item
+    position: relative
+    transition: 1s
+    &:hover
+        border-radius: 16px
+        box-shadow: 2px 4px 5px #1c1c1ca3
+        transform: scale(1.05)
+
+.img__text
+    position: absolute
+    bottom: 33px
+    left: 62px
+
+.img__text--2
+    position: absolute
+    bottom: 21px
+    left: 30px
+
+.img__text--3
+    position: absolute
+    bottom: 11px
+    left: 34px
+
+.img__text--4
+    position: absolute
+    bottom: 22px
+    left: 30px
+
+.img__text--5
+    position: absolute
+    bottom: 22px
+    left: 34px
+
+.section__download
+    padding: 96px 0
+    opacity: -1
+
+.download__title
+    font-weight: 600
+    font-size: 32px
+    letter-spacing: 0.5px
+    line-height: 39px
+    text-align: center
+    color: $w
+
+.download__img
+    display: flex
+    padding-top: 10px
+    grid-gap: 8px
+    align-items: center
+    justify-content: center
+
+//Footer
+.footer
+    background-color: $fblue
+
+.footer__content
+    padding: 40px 0 133px
+    display: flex
+    justify-content: space-between
+    opacity: 1
+
+.footer__menu
+    display: flex
+    padding-top: 3px
+    flex-basis: 74%
+    max-width: 74%
+
+.footer__menu--col
+    flex-basis: 24%
+    max-width: 24%
+
+.footer__logo
+    display: inline-grid
+    max-width: 20%
+    flex-basis: 20%
+
+.logo__item
+    padding-top: 65px
+    font-size: 13px
+    line-height: 16px
+    letter-spacing: 0.05em
+    color: $w
+
+.footer__menu--title
+    font-size: 16px
+    line-height: 20px
+    letter-spacing: 0.05em
+    color: $w
+    +sebold
+
+.footer__menu--list
+    li
+        padding-top: 8px
+
+    a
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.05em
+        color: $w
+
+.footer__social
+    display: flex
+    grid-gap: 31px
+    padding-top: 40px

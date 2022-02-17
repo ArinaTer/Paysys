@@ -1,0 +1,33 @@
+body
+	min-width: 320px
+	overflow-x: hidden
+	color: $b
+	+reg
+
+
+.container
+	max-width: 1440px
+	margin: 0 auto
+	padding: 0 100px
+	position: relative
+	z-index: 1
+	+r(1280)
+		padding: 0 80px
+	+r(1080)
+		padding: 0 60px
+	// +r(782)
+	// 	padding: 0 20px
+
+[none]
+	display: none
+	visibility: hidden
+	position: absolute
+	left: -9999999
+	top: -9999999
+
+.btn
+	font-size: 12px
+	border-radius: 6px
+	display: inline-block
+	background: transparent
+

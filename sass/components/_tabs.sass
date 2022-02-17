@@ -1,0 +1,23 @@
+.tab-slider--tabs
+    position: relative
+    overflow: hidden
+    display: flex
+    border-bottom: 1px solid #888AA2
+    grid-gap: 53px
+
+    li
+        padding: 0 0 10px
+        font-size: 16px
+        line-height: 20px
+        color: #888AA2
+
+.tab-slider--trigger
+    position: relative
+    z-index: 2
+    cursor: pointer
+    transition: color 250ms ease-in-out
+    &.active
+        color: $blue
+        border-bottom: 3px solid $blue
+        font-weight: 600
+
